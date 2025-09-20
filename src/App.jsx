@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyBlogs from "./components/MyBlogs";
 import BlogDetail from "./components/BlogDetail";
 
-
 function App() {
   const [session, setSession] = useState(null);
 
@@ -30,17 +29,15 @@ function App() {
     <>
     <BrowserRouter>
       <Header session={session} />
-    
-      <div>
-        Your Blogss
-        <MyBlogs session={session} />
-      </div>
+      {/* <MyBlogs session={session}/> */}
+      <main className="pt-24 px-6">
         <Routes>
-          {/* <Route path="/" element={<Home session={session} />} /> */}
+          <Route path="/" element={<MyBlogs session={session} />} />
           <Route path="/write" element={<WriteBlog session={session} />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/my-blogs" element={<MyBlogs session={session} />} />
         </Routes>
+      </main>
     </BrowserRouter>
     </>
   );
