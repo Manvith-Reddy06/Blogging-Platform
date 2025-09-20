@@ -1,5 +1,6 @@
 import React from "react";
 import { supabase } from "../supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 const signInWithGoogle = async () => {
   await supabase.auth.signInWithOAuth({ provider: "google" });
@@ -10,6 +11,7 @@ const signOut = async () => {
 };
 
 function Header({ session }) {
+  const navigate = useNavigate();
   console.log("Session in Header:", session); // Add this for debugging
 
   const avatarUrl =
@@ -17,7 +19,7 @@ function Header({ session }) {
     session?.user?.user_metadata?.picture;
   console.log("Avatar URL in Header:", avatarUrl); 
   return (
-    <header className="shadow-lg fixed top-0 left-0 w-full z-50">
+    <header className="shadow-lg fixed top-0 left-0 w-full z-50 bg-white">
       <div className="w-full px-8 py-4 flex justify-between items-center">
         
         <div className="flex items-center">
@@ -54,7 +56,7 @@ function Header({ session }) {
         </nav>
         
         <div className="flex items-center space-x-4">
-          <button className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-md font-medium transition-colors shadow-md">
+          <button className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-md font-medium transition-colors shadow-md" onClick={()=>navigate('/write')}>
             Write
           </button>
           {session ? (

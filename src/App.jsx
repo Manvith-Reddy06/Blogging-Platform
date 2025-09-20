@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 // import Auth from "./components/Auth";
 import { supabase } from "./supabaseClient";
+// import Home from "./Home";
+import WriteBlog from "./components/WriteBlog";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MyBlogs from "./components/MyBlogs";
+import BlogDetail from "./components/BlogDetail";
+
 
 function App() {
   const [session, setSession] = useState(null);
@@ -21,13 +27,22 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
+    <BrowserRouter>
       <Header session={session} />
-      <div className="container mx-auto px-4 pt-24 pb-6">
-        <h1>Blogging Platform</h1>
-        
+    
+      <div>
+        Your Blogss
+        <MyBlogs session={session} />
       </div>
-    </div>
+        <Routes>
+          {/* <Route path="/" element={<Home session={session} />} /> */}
+          <Route path="/write" element={<WriteBlog session={session} />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/my-blogs" element={<MyBlogs session={session} />} />
+        </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
