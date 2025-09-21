@@ -68,7 +68,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="flex items-center justify-center bg-gray-100" style={{ minHeight: 'calc(100vh - 15rem)' }}>
+      <div className="flex items-center justify-center bg-gray-100 min-w-screen" >
         <div className="bg-black text-white p-12 rounded-lg shadow-2xl text-center max-w-4xl mx-auto">
           <h1 className="text-5xl font-extrabold mb-4">Unleash Your Voice</h1>
           <p className="text-xl mb-8 text-gray-300">

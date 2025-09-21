@@ -76,7 +76,7 @@ export default function MyBlogs({ session }) {
   if (!session) return <p>You must be logged in to see your blogs.</p>;
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container flex justify-center flex-col p-6 min-w-screen bg-gray-100">
       <h1 className="text-3xl font-bold mb-6 text-center">My Blogs</h1>
       {blogs.length === 0 && !loading ? (
         <p className="text-center text-gray-500">
@@ -99,10 +99,10 @@ export default function MyBlogs({ session }) {
                   <p className="text-gray-700 mt-4 truncate-3-lines">{blog.content}</p>
                 </div>
                 <div className="flex items-center justify-end space-x-2 mt-4">
-                  <button onClick={() => navigate(`/edit-blog/${blog.id}`)} className="bg-yellow-500 text-white px-3 py-1 rounded-md text-sm hover:bg-yellow-600 transition-colors">
+                  <button onClick={() => navigate(`/edit-blog/${blog.id}`)} className="bg-yellow-500 text-black px-3 py-1 rounded-md text-sm hover:bg-yellow-600 transition-colors">
                     Update
                   </button>
-                  <button onClick={() => handleDelete(blog.id)} className="bg-red-500 text-white px-3 py-1 rounded-md text-sm hover:bg-red-600 transition-colors">
+                  <button onClick={() => handleDelete(blog.id)} className="bg-red-500 text-black px-3 py-1 rounded-md text-sm hover:bg-red-600 transition-colors">
                     Delete
                   </button>
                 </div>

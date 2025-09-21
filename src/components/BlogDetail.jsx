@@ -106,14 +106,14 @@ export default function BlogDetail({ session }) {
   if (!blog) return <p>Loading blog...</p>;
 
   return (
-   <div className="min-h-screen w-full bg-gray-50 py-10 mx-auto"> {/* ✅ w-full added */}
-    <div className="max-w-4xl w-full mx-auto p-6 bg-white shadow-md rounded-lg">
+   <div className="min-w-screen bg-gray-100 flex justify-center py-10"> {/* ✅ w-full added */}
+    <div className="max-w-4xl  p-6 bg-white shadow-md rounded-lg">
         <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
-        <div className="flex items-center space-x-4 mb-4">
+        <div className=" space-x-4 mb-4">
           <button
             onClick={() => likeBlog(blog.id)}
             className={`px-4 py-2 rounded ${
-              liked ? "bg-red-500 text-white" : "bg-gray-200 text-black"
+              liked ? "bg-red-500 text-black" : "bg-gray-200 text-black"
             }`}
             disabled={liked}
           >
@@ -124,7 +124,7 @@ export default function BlogDetail({ session }) {
               onClick={toggleBookmark}
               className={`px-4 py-2 rounded ${
                 isBookmarked
-                  ? "bg-blue-500 text-white"
+                  ? "bg-blue-500 text-black"
                   : "bg-gray-200 text-black"
               }`}
             >
