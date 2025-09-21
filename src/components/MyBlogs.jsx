@@ -100,10 +100,10 @@ export default function MyBlogs({ session }) {
                   <p className="text-gray-700 mt-4 truncate-3-lines">{blog.content}</p>
                 </div>
                 <div className="flex items-center justify-end space-x-2 mt-4">
-                  <CustomButton onClick={() => navigate(`/edit-blog/${blog.id}`)} variant="warning" className="!px-3 !py-1 !text-sm !bg-black">
+                  <CustomButton onClick={() => navigate(`/edit-blog/${blog.id}`)} variant="warning" className="!px-3 !py-1 !text-sm">
                     Update
                   </CustomButton>
-                  <CustomButton onClick={() => handleDelete(blog.id)} variant="danger" className="!px-3 !py-1 !text-sm !bg-black">
+                  <CustomButton onClick={() => handleDelete(blog.id)} variant="danger" className="!px-3 !py-1 !text-sm">
                     Delete
                   </CustomButton>
                 </div>
