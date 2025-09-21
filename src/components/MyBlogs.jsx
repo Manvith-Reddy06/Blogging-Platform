@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { supabase } from "../supabaseClient";
 import { Link, useNavigate } from "react-router-dom";
+import CustomButton from "./CustomButton";
 
 const BLOGS_PER_PAGE = 6;
 
@@ -99,12 +100,12 @@ export default function MyBlogs({ session }) {
                   <p className="text-gray-700 mt-4 truncate-3-lines">{blog.content}</p>
                 </div>
                 <div className="flex items-center justify-end space-x-2 mt-4">
-                  <button onClick={() => navigate(`/edit-blog/${blog.id}`)} className="bg-yellow-500 text-black px-3 py-1 rounded-md text-sm hover:bg-yellow-600 transition-colors">
+                  <CustomButton onClick={() => navigate(`/edit-blog/${blog.id}`)} variant="warning" className="!px-3 !py-1 !text-sm !bg-black">
                     Update
-                  </button>
-                  <button onClick={() => handleDelete(blog.id)} className="bg-red-500 text-black px-3 py-1 rounded-md text-sm hover:bg-red-600 transition-colors">
+                  </CustomButton>
+                  <CustomButton onClick={() => handleDelete(blog.id)} variant="danger" className="!px-3 !py-1 !text-sm !bg-black">
                     Delete
-                  </button>
+                  </CustomButton>
                 </div>
               </div>
             );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { supabase } from "../supabaseClient";
 import { useNavigate } from "react-router-dom";
 import { model } from "../gemini";
+import CustomButton from "./CustomButton";
 
 export default function WriteBlog({ session }) {
   const [title, setTitle] = useState("");
@@ -72,7 +73,7 @@ export default function WriteBlog({ session }) {
   };
 
   return (
-    <div className="min-h-screen flex justify-center  min-w-screen bg-gray-50 p-6">
+    <div className="min-h-screen flex justify-center bg-gray-50 p-6">
       <div className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8">
         <h1 className="text-3xl font-bold mb-6 text-center">Write a Blog</h1>
 
@@ -93,14 +94,14 @@ export default function WriteBlog({ session }) {
             />
 
             {/* Suggest Titles button BELOW input */}
-            <button
+            <CustomButton
               type="button"
               onClick={handleAiSuggest}
-              className="mt-2 w-full bg-purple-600 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-700 transition disabled:bg-gray-400"
+              className="mt-2 w-full !text-white bg-purple-600 hover:bg-purple-700"
               disabled={isSuggesting}
             >
               {isSuggesting ? "Thinking..." : "✨ Suggest Titles"}
-            </button>
+            </CustomButton>
           </div>
 
           {/* AI Suggestions */}
@@ -137,14 +138,9 @@ export default function WriteBlog({ session }) {
             onChange={(e) => setContent(e.target.value)}
             required
           />
-
-          {/* Submit */}
-          <button
-            type="submit"
-            className="w-full bg-blue-600 shadow-lg text-black px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-          >
+          <CustomButton type="submit" variant="primary" className="w-full !py-3">
             Publish
-          </button>
+          </CustomButton>
         </form>
       </div>
     </div>

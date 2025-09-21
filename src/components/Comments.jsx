@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../supabaseClient";
+import CustomButton from "./CustomButton";
 
 export default function Comments({ blogId, session }) {
   const [comments, setComments] = useState([]);
@@ -60,9 +61,9 @@ export default function Comments({ blogId, session }) {
         <form onSubmit={handleSubmitComment} className="mb-8 flex flex-col">
           <textarea className="w-full p-3 border rounded-lg" rows="3" placeholder="Write a comment..." value={newComment} onChange={(e) => setNewComment(e.target.value)} required ></textarea>
           <div className="flex justify-end">
-            <button type="submit" className="mt-2 px-6 py-2 bg-blue-600 text-black font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition" >
+            <CustomButton type="submit" variant="primary" className="mt-2">
               Post Comment
-            </button>
+            </CustomButton>
           </div>
         </form>
       )}

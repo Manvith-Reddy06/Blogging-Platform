@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "../supabaseClient";
+import CustomButton from "./CustomButton";
 
 function PopularBlogsSection() {
   const [blogs, setBlogs] = useState([]);
@@ -76,7 +77,7 @@ export default function HomePage() {
             own. Our platform is a space for writers and readers to connect and
             inspire. Start your journey today.
           </p>
-          <button onClick={() => navigate("/write")} className="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-transform transform hover:scale-105 shadow-lg">
+          <button onClick={() => navigate("/write")} className="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-transform transform hover:scale-105 shadow-lg custom-button">
             Write Your Own Blog
           </button>
         </div>

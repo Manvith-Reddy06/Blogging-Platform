@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../supabaseClient";
 import { useNavigate, useParams } from "react-router-dom";
+import CustomButton from "./CustomButton";
 
 export default function UpdateBlog({ session }) {
   const { id } = useParams();
@@ -64,15 +65,17 @@ export default function UpdateBlog({ session }) {
   }
 
   return (
-    <div className="container bg-gray-100 min-w-screen flex justify-center p-6">
-      <h1 className="text-2xl font-bold mb-4">Update Blog</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input type="text" placeholder="Blog Title" className="w-full p-3 border rounded-lg" value={title} onChange={(e) => setTitle(e.target.value)} required />
-        <textarea placeholder="Write your blog content here..." className="w-full p-3 border rounded-lg h-60" value={content} onChange={(e) => setContent(e.target.value)} required />
-        <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-          Update
-        </button>
-      </form>
+    <div className="min-h-screen flex justify-center bg-gray-50 p-6">
+      <div className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8">
+        <h1 className="text-2xl font-bold mb-4">Update Blog</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input type="text" placeholder="Blog Title" className="w-full p-3 border rounded-lg" value={title} onChange={(e) => setTitle(e.target.value)} required />
+          <textarea placeholder="Write your blog content here..." className="w-full p-3 border rounded-lg h-60" value={content} onChange={(e) => setContent(e.target.value)} required />
+          <CustomButton type="submit" variant="primary">
+            Update
+          </CustomButton>
+        </form>
+      </div>
     </div>
   );
 }

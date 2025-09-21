@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { supabase } from "../supabaseClient";
 import { useNavigate, Link, useLocation } from "react-router-dom";
+import CustomButton from "./CustomButton";
 
 const signInWithGoogle = async () => {
   await supabase.auth.signInWithOAuth({ provider: "google" });
@@ -118,9 +119,9 @@ function Header({ session }) {
               </button>
             </div>
           </form>
-          <button className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-md font-medium transition-colors shadow-md" onClick={()=>navigate('/write')}>
+          <CustomButton onClick={()=>navigate('/write')} variant="primary">
             Write
-          </button>
+          </CustomButton>
           {session ? (
             <div className="relative" ref={menuRef}>
               <button
@@ -176,7 +177,7 @@ function Header({ session }) {
               )}
             </div>
           ) : (
-            <button onClick={signInWithGoogle} className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-md font-medium transition-colors shadow-md">Login</button>
+            <CustomButton onClick={signInWithGoogle} variant="secondary">Login</CustomButton>
           )}
         </div>
       </div>
