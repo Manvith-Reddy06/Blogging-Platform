@@ -46,7 +46,8 @@ This platform includes a wide range of features, covering core functionalities a
 
 - **Frontend**: React, Vite, Tailwind CSS
 - **Styling**: SCSS
-- **Backend & Database**: Supabase (PostgreSQL, Auth)
+- **Database**: Supabase (PostgreSQL, Auth)
+- **Backend**:Express js
 - **State Management**: Redux Toolkit
 - **AI**: Google Gemini API
 
@@ -181,4 +182,4 @@ The most prominent AI feature is the title suggestion tool in the blog editor.
   - A `504 (Outdated Optimize Dep)` error from Vite was resolved by getting help from the AI to create a `vite.config.js` file and force-re-bundle dependencies.
   - A `404 model not found` error from the Gemini API was fixed by prompting the AI for the latest recommended model name (`gemini-1.5-flash`).
 - **Database Schema Design**: My initial idea for bookmarks was a simple boolean on the `blogs` table. AI helped me realize a more scalable many-to-many approach using a dedicated `bookmarks` table was better. It also helped debug a `bigint` vs. `uuid` type mismatch in the foreign key constraint.
-- **Layout Inconsistencies**: Achieving a consistent, centered, and responsive layout across all pages was challenging. I used AI to debug CSS and provide the correct Tailwind CSS classes to fix these issues.
+- **Auth and Deployment**:  AI help me automate authentication and Netlify deployment as everything is available on the web
