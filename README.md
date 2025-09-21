@@ -6,7 +6,9 @@ A full-featured, modern blogging platform built with React, Vite, and Supabase. 
 [https://bloggingplatformmanvith.netlify.app/](https://bloggingplatformmanvith.netlify.app/)
 
 ## Demo Video
-video.gif
+
+![Demo Video](./video.gif)
+
 
 
 <!-- Option 1: Embed a GIF. Place your demo.gif in a /docs folder and uncomment the line below. -->
