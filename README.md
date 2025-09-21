@@ -89,6 +89,30 @@ This platform includes a wide range of features, covering core functionalities a
 
 ---
 
+## 📌 Supabase Postman Collection
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/import)
+
+We use Supabase for the backend API.
+A Postman collection is provided to make it easy to test the APIs.
+
+### 🔹 Import into Postman
+1. Open Postman.
+2. Click **Import**.
+3. Choose **File** and select `supabase-api-collection.json` from this repo.
+4. Once imported, you’ll see all endpoints grouped by resource.
+
+### 🔑 Authentication
+All requests require the `apikey` in the headers.
+
+Example headers (replace with your own keys from Supabase project settings):
+```http
+apikey: <anon-key>
+Authorization: Bearer <anon-key>
+```
+
+---
+
 ## 🛠️ Setup and Installation
 
 Follow these steps to get the project running on your local machine.
