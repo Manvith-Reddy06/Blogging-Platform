@@ -1,0 +1,11 @@
+# Netlify build configuration
+[build]
+  command = "npm run build" # The command to build your site
+  publish = "dist"          # The directory to publish
+
+# Redirect rule for Single Page Applications (SPAs)
+# This ensures that all routes are handled by your React app
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
