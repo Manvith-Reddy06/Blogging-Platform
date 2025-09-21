@@ -73,7 +73,7 @@ export default function WriteBlog({ session }) {
   };
 
   return (
-    <div className="min-h-screen flex justify-center bg-gray-50 p-6">
+    <div className="min-h-screen flex justify-center w-screen bg-gray-50 p-6">
       <div className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8">
         <h1 className="text-3xl font-bold mb-6 text-center">Write a Blog</h1>
 
