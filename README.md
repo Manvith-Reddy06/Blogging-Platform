@@ -2,7 +2,8 @@
 
 A full-featured, modern blogging platform built with React, Vite, and Supabase. This application allows users to authenticate via Google, manage their own blog posts with full CRUD functionality, and interact with content through likes, bookmarks, and comments. It also features an AI-powered assistant to help writers craft better titles.
 
-## Hosted Site
+## Hosted Site 
+https://bloggingplatformmanvith.netlify.app/
 
 > **Note**: You can add the link to your hosted application here.
 
@@ -17,7 +18,7 @@ A full-featured, modern blogging platform built with React, Vite, and Supabase. 
 This platform includes a wide range of features, covering core functionalities as well as advanced bonus features.
 
 ### Core Features
-- **User Authentication**: Secure and simple sign-in/sign-out with Google, powered by Supabase Auth.
+- **User Authentication**: Secyure and simple sign-in/sign-out with Google, powered by Supabase Auth.
 - **CRUD for Blogs**:
   - **Create**: A dedicated page to write and publish new blog posts.
   - **Read**: A clean, full-screen view for reading blog posts.
