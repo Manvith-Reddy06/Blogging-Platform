@@ -1,0 +1,1822 @@
+{
+	"info": {
+		"_postman_id": "64aa614c-ee7d-420d-aced-bc73029e6ba1",
+		"name": "standard public schema",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43619490",
+		"_collection_link": "https://manvithreddy.postman.co/workspace/blog~e73ef8c3-2ca5-4dc2-9f09-8b0d7e7503ec/collection/43619490-64aa614c-ee7d-420d-aced-bc73029e6ba1?action=share&source=collection_link&creator=43619490"
+	},
+	"item": [
+		{
+			"name": "/",
+			"item": [
+				{
+					"name": "OpenAPI description (this document)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "bookmarks",
+			"item": [
+				{
+					"name": "/bookmarks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Range",
+								"value": "string",
+								"description": "Limiting and Pagination"
+							},
+							{
+								"key": "Range-Unit",
+								"value": "items",
+								"description": "Limiting and Pagination"
+							},
+							{
+								"key": "Prefer",
+								"value": "count=none",
+								"description": "Preference"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/bookmarks?id=string&user_id=string&blog_id=string&created_at=string&select=string&order=string&offset=string&limit=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookmarks"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "blog_id",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								},
+								{
+									"key": "select",
+									"value": "string",
+									"description": "Filtering Columns"
+								},
+								{
+									"key": "order",
+									"value": "string",
+									"description": "Ordering"
+								},
+								{
+									"key": "offset",
+									"value": "string",
+									"description": "Limiting and Pagination"
+								},
+								{
+									"key": "limit",
+									"value": "string",
+									"description": "Limiting and Pagination"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "string",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Range-Unit",
+										"value": "items",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Prefer",
+										"value": "count=none",
+										"description": "Preference"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookmarks?id=string&user_id=string&blog_id=string&created_at=string&select=string&order=string&offset=string&limit=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookmarks"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										},
+										{
+											"key": "order",
+											"value": "string",
+											"description": "Ordering"
+										},
+										{
+											"key": "offset",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										},
+										{
+											"key": "limit",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 1151,\n    \"user_id\": \"69a6a0db-b66d-81fe-ba72-4412c249adcb\",\n    \"blog_id\": \"2f83e133-5ca7-a1c8-7275-96de967d0e10\",\n    \"created_at\": \"now()\"\n  },\n  {\n    \"id\": 5595,\n    \"user_id\": \"28ee83f6-d997-5535-dfff-0314a120f151\",\n    \"blog_id\": \"314592a7-51a9-7ff8-236c-4cb4a0935b1c\",\n    \"created_at\": \"now()\"\n  }\n]"
+						},
+						{
+							"name": "Partial Content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "string",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Range-Unit",
+										"value": "items",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Prefer",
+										"value": "count=none",
+										"description": "Preference"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookmarks?id=string&user_id=string&blog_id=string&created_at=string&select=string&order=string&offset=string&limit=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookmarks"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										},
+										{
+											"key": "order",
+											"value": "string",
+											"description": "Ordering"
+										},
+										{
+											"key": "offset",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										},
+										{
+											"key": "limit",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										}
+									]
+								}
+							},
+							"status": "Partial Content",
+							"code": 206,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/bookmarks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "resolution=merge-duplicates",
+								"description": "Preference"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 2048,\n  \"user_id\": \"5f61951b-66e0-4c92-315c-70510b51a09c\",\n  \"blog_id\": \"74ecb6ab-c24f-68b6-214d-ac88628e1770\",\n  \"created_at\": \"now()\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/bookmarks?select=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookmarks"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "string",
+									"description": "Filtering Columns"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "resolution=merge-duplicates",
+										"description": "Preference"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 2048,\n  \"user_id\": \"5f61951b-66e0-4c92-315c-70510b51a09c\",\n  \"blog_id\": \"74ecb6ab-c24f-68b6-214d-ac88628e1770\",\n  \"created_at\": \"now()\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookmarks?select=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookmarks"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/bookmarks",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "return=none",
+								"description": "Preference"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/bookmarks?id=string&user_id=string&blog_id=string&created_at=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookmarks"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "blog_id",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "return=none",
+										"description": "Preference"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookmarks?id=string&user_id=string&blog_id=string&created_at=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookmarks"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/bookmarks",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "return=none",
+								"description": "Preference"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 2048,\n  \"user_id\": \"5f61951b-66e0-4c92-315c-70510b51a09c\",\n  \"blog_id\": \"74ecb6ab-c24f-68b6-214d-ac88628e1770\",\n  \"created_at\": \"now()\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/bookmarks?id=string&user_id=string&blog_id=string&created_at=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookmarks"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "blog_id",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "return=none",
+										"description": "Preference"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 2048,\n  \"user_id\": \"5f61951b-66e0-4c92-315c-70510b51a09c\",\n  \"blog_id\": \"74ecb6ab-c24f-68b6-214d-ac88628e1770\",\n  \"created_at\": \"now()\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookmarks?id=string&user_id=string&blog_id=string&created_at=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookmarks"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "blogs",
+			"item": [
+				{
+					"name": "/blogs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Range",
+								"value": "string",
+								"description": "Limiting and Pagination"
+							},
+							{
+								"key": "Range-Unit",
+								"value": "items",
+								"description": "Limiting and Pagination"
+							},
+							{
+								"key": "Prefer",
+								"value": "count=none",
+								"description": "Preference"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/blogs?id=string&title=string&content=string&created_at=string&user_id=string&author_email=string&likes=string&select=string&order=string&offset=string&limit=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "title",
+									"value": "string"
+								},
+								{
+									"key": "content",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "author_email",
+									"value": "string"
+								},
+								{
+									"key": "likes",
+									"value": "string"
+								},
+								{
+									"key": "select",
+									"value": "string",
+									"description": "Filtering Columns"
+								},
+								{
+									"key": "order",
+									"value": "string",
+									"description": "Ordering"
+								},
+								{
+									"key": "offset",
+									"value": "string",
+									"description": "Limiting and Pagination"
+								},
+								{
+									"key": "limit",
+									"value": "string",
+									"description": "Limiting and Pagination"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "string",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Range-Unit",
+										"value": "items",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Prefer",
+										"value": "count=none",
+										"description": "Preference"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/blogs?id=string&title=string&content=string&created_at=string&user_id=string&author_email=string&likes=string&select=string&order=string&offset=string&limit=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"blogs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "title",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "likes",
+											"value": "string"
+										},
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										},
+										{
+											"key": "order",
+											"value": "string",
+											"description": "Ordering"
+										},
+										{
+											"key": "offset",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										},
+										{
+											"key": "limit",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"gen_random_uuid()\",\n    \"title\": \"string\",\n    \"content\": \"string\",\n    \"author_email\": \"string\",\n    \"created_at\": \"now()\",\n    \"user_id\": \"db915c2f-a781-d5ba-47f4-0c4d35e4546b\",\n    \"likes\": 0\n  },\n  {\n    \"id\": \"gen_random_uuid()\",\n    \"title\": \"string\",\n    \"content\": \"string\",\n    \"author_email\": \"string\",\n    \"created_at\": \"now()\",\n    \"user_id\": \"6799f90a-7191-20b9-930c-36d7784b1a2b\",\n    \"likes\": 0\n  }\n]"
+						},
+						{
+							"name": "Partial Content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "string",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Range-Unit",
+										"value": "items",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Prefer",
+										"value": "count=none",
+										"description": "Preference"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/blogs?id=string&title=string&content=string&created_at=string&user_id=string&author_email=string&likes=string&select=string&order=string&offset=string&limit=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"blogs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "title",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "likes",
+											"value": "string"
+										},
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										},
+										{
+											"key": "order",
+											"value": "string",
+											"description": "Ordering"
+										},
+										{
+											"key": "offset",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										},
+										{
+											"key": "limit",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										}
+									]
+								}
+							},
+							"status": "Partial Content",
+							"code": 206,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/blogs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "resolution=merge-duplicates",
+								"description": "Preference"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"gen_random_uuid()\",\n  \"title\": \"string\",\n  \"content\": \"string\",\n  \"author_email\": \"string\",\n  \"created_at\": \"now()\",\n  \"user_id\": \"abe141d4-8549-1648-6e12-81207e6e521b\",\n  \"likes\": 0\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/blogs?select=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "string",
+									"description": "Filtering Columns"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "resolution=merge-duplicates",
+										"description": "Preference"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"gen_random_uuid()\",\n  \"title\": \"string\",\n  \"content\": \"string\",\n  \"author_email\": \"string\",\n  \"created_at\": \"now()\",\n  \"user_id\": \"abe141d4-8549-1648-6e12-81207e6e521b\",\n  \"likes\": 0\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/blogs?select=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"blogs"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/blogs",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "return=none",
+								"description": "Preference"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/blogs?id=string&title=string&content=string&created_at=string&user_id=string&author_email=string&likes=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "title",
+									"value": "string"
+								},
+								{
+									"key": "content",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "author_email",
+									"value": "string"
+								},
+								{
+									"key": "likes",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "return=none",
+										"description": "Preference"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/blogs?id=string&title=string&content=string&created_at=string&user_id=string&author_email=string&likes=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"blogs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "title",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "likes",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/blogs",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "return=none",
+								"description": "Preference"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"gen_random_uuid()\",\n  \"title\": \"string\",\n  \"content\": \"string\",\n  \"author_email\": \"string\",\n  \"created_at\": \"now()\",\n  \"user_id\": \"abe141d4-8549-1648-6e12-81207e6e521b\",\n  \"likes\": 0\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/blogs?id=string&title=string&content=string&created_at=string&user_id=string&author_email=string&likes=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "title",
+									"value": "string"
+								},
+								{
+									"key": "content",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "author_email",
+									"value": "string"
+								},
+								{
+									"key": "likes",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "return=none",
+										"description": "Preference"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"gen_random_uuid()\",\n  \"title\": \"string\",\n  \"content\": \"string\",\n  \"author_email\": \"string\",\n  \"created_at\": \"now()\",\n  \"user_id\": \"abe141d4-8549-1648-6e12-81207e6e521b\",\n  \"likes\": 0\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/blogs?id=string&title=string&content=string&created_at=string&user_id=string&author_email=string&likes=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"blogs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "title",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "likes",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "/comments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Range",
+								"value": "string",
+								"description": "Limiting and Pagination"
+							},
+							{
+								"key": "Range-Unit",
+								"value": "items",
+								"description": "Limiting and Pagination"
+							},
+							{
+								"key": "Prefer",
+								"value": "count=none",
+								"description": "Preference"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/comments?id=string&blog_id=string&user_id=string&author_email=string&content=string&created_at=string&select=string&order=string&offset=string&limit=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "blog_id",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "author_email",
+									"value": "string"
+								},
+								{
+									"key": "content",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								},
+								{
+									"key": "select",
+									"value": "string",
+									"description": "Filtering Columns"
+								},
+								{
+									"key": "order",
+									"value": "string",
+									"description": "Ordering"
+								},
+								{
+									"key": "offset",
+									"value": "string",
+									"description": "Limiting and Pagination"
+								},
+								{
+									"key": "limit",
+									"value": "string",
+									"description": "Limiting and Pagination"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "string",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Range-Unit",
+										"value": "items",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Prefer",
+										"value": "count=none",
+										"description": "Preference"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/comments?id=string&blog_id=string&user_id=string&author_email=string&content=string&created_at=string&select=string&order=string&offset=string&limit=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										},
+										{
+											"key": "order",
+											"value": "string",
+											"description": "Ordering"
+										},
+										{
+											"key": "offset",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										},
+										{
+											"key": "limit",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 5342,\n    \"blog_id\": \"543e593e-c7ae-2f8a-12dd-83fa21cf3572\",\n    \"user_id\": \"9b2a1fbc-0109-08fc-e2b3-04eef7e543f4\",\n    \"content\": \"string\",\n    \"created_at\": \"now()\",\n    \"author_email\": \"string\"\n  },\n  {\n    \"id\": 3884,\n    \"blog_id\": \"318fc2a4-bda0-bc05-aab7-04fc84a3720c\",\n    \"user_id\": \"ea3e5b1f-0396-2051-9081-5173b11b7b9b\",\n    \"content\": \"string\",\n    \"created_at\": \"now()\",\n    \"author_email\": \"string\"\n  }\n]"
+						},
+						{
+							"name": "Partial Content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Range",
+										"value": "string",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Range-Unit",
+										"value": "items",
+										"description": "Limiting and Pagination"
+									},
+									{
+										"key": "Prefer",
+										"value": "count=none",
+										"description": "Preference"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/comments?id=string&blog_id=string&user_id=string&author_email=string&content=string&created_at=string&select=string&order=string&offset=string&limit=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										},
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										},
+										{
+											"key": "order",
+											"value": "string",
+											"description": "Ordering"
+										},
+										{
+											"key": "offset",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										},
+										{
+											"key": "limit",
+											"value": "string",
+											"description": "Limiting and Pagination"
+										}
+									]
+								}
+							},
+							"status": "Partial Content",
+							"code": 206,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "resolution=merge-duplicates",
+								"description": "Preference"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 4030,\n  \"blog_id\": \"596e1610-8af1-c416-681b-adc70bc7f072\",\n  \"user_id\": \"a14c5d67-8910-add7-56e3-35024bb239fb\",\n  \"content\": \"string\",\n  \"created_at\": \"now()\",\n  \"author_email\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/comments?select=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "string",
+									"description": "Filtering Columns"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "resolution=merge-duplicates",
+										"description": "Preference"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 4030,\n  \"blog_id\": \"596e1610-8af1-c416-681b-adc70bc7f072\",\n  \"user_id\": \"a14c5d67-8910-add7-56e3-35024bb239fb\",\n  \"content\": \"string\",\n  \"created_at\": \"now()\",\n  \"author_email\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/comments?select=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "select",
+											"value": "string",
+											"description": "Filtering Columns"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/comments",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "return=none",
+								"description": "Preference"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/comments?id=string&blog_id=string&user_id=string&author_email=string&content=string&created_at=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "blog_id",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "author_email",
+									"value": "string"
+								},
+								{
+									"key": "content",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "return=none",
+										"description": "Preference"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/comments?id=string&blog_id=string&user_id=string&author_email=string&content=string&created_at=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/comments",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Prefer",
+								"value": "return=none",
+								"description": "Preference"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 4030,\n  \"blog_id\": \"596e1610-8af1-c416-681b-adc70bc7f072\",\n  \"user_id\": \"a14c5d67-8910-add7-56e3-35024bb239fb\",\n  \"content\": \"string\",\n  \"created_at\": \"now()\",\n  \"author_email\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/comments?id=string&blog_id=string&user_id=string&author_email=string&content=string&created_at=string",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "string"
+								},
+								{
+									"key": "blog_id",
+									"value": "string"
+								},
+								{
+									"key": "user_id",
+									"value": "string"
+								},
+								{
+									"key": "author_email",
+									"value": "string"
+								},
+								{
+									"key": "content",
+									"value": "string"
+								},
+								{
+									"key": "created_at",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Prefer",
+										"value": "return=none",
+										"description": "Preference"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 4030,\n  \"blog_id\": \"596e1610-8af1-c416-681b-adc70bc7f072\",\n  \"user_id\": \"a14c5d67-8910-add7-56e3-35024bb239fb\",\n  \"content\": \"string\",\n  \"created_at\": \"now()\",\n  \"author_email\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/comments?id=string&blog_id=string&user_id=string&author_email=string&content=string&created_at=string",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "string"
+										},
+										{
+											"key": "blog_id",
+											"value": "string"
+										},
+										{
+											"key": "user_id",
+											"value": "string"
+										},
+										{
+											"key": "author_email",
+											"value": "string"
+										},
+										{
+											"key": "content",
+											"value": "string"
+										},
+										{
+											"key": "created_at",
+											"value": "string"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://lydmaxbldbumlnfiaphj.supabase.co:443"
+		}
+	]
+}

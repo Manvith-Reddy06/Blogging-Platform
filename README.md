@@ -6,7 +6,12 @@ A full-featured, modern blogging platform built with React, Vite, and Supabase. 
 [https://bloggingplatformmanvith.netlify.app/](https://bloggingplatformmanvith.netlify.app/)
 
 ## Demo Video
-video.gif
+![Project Demo](video.gif)
+
+<!-- Option 1: Embed a GIF. Place your demo.gif in a /docs folder and uncomment the line below. -->
+<!-- ![Project Demo](./docs/demo.gif) -->
+
+
 
 
 <!-- Option 1: Embed a GIF. Place your demo.gif in a /docs folder and uncomment the line below. -->
@@ -171,7 +176,6 @@ Artificial Intelligence played a significant role as a coding assistant and a fe
 
 2.  **AI-Assisted Refinement & Feature Expansion**: After the core was stable, AI coding assistants (**Gemini CLI**, **ChatGPT**, and **Trae AI**) were used to accelerate development, debug issues, and implement new features.
     - **Authentication**: I used AI to help implement the Google OAuth flow with Supabase. This included handling the session data, displaying the user's profile picture in the header, and creating the user dropdown menu.
-    - **UI/UX Adjustments**: Prompts were frequently used to solve layout challenges, such as centering pages, fixing flexbox issues, and making the UI responsive.
     - **New Features**: For features like the comment and bookmarking systems, I prompted the AI to help generate the initial Supabase SQL schemas and the React component structure. This provided a great starting point, which I then refined.
 
 ### Generative AI Feature: Title Suggestions
