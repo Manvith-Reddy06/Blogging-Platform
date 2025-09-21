@@ -2,14 +2,21 @@
 
 A full-featured, modern blogging platform built with React, Vite, and Supabase. This application allows users to authenticate via Google, manage their own blog posts with full CRUD functionality, and interact with content through likes, bookmarks, and comments. It also features an AI-powered assistant to help writers craft better titles.
 
-## Hosted Site 
-https://bloggingplatformmanvith.netlify.app/
-
-> **Note**: You can add the link to your hosted application here.
+## Hosted Site
+[https://bloggingplatformmanvith.netlify.app/](https://bloggingplatformmanvith.netlify.app/)
 
 ## Demo Video
+video.gif
 
-> **Note**: You can add a link to your screen recording or demo video here.
+
+<!-- Option 1: Embed a GIF. Place your demo.gif in a /docs folder and uncomment the line below. -->
+<!-- ![Project Demo](./docs/demo.gif) -->
+
+<!-- Option 2: Link to a YouTube video. Replace YOUR_VIDEO_ID with your actual video ID. -->
+<!-- [![Project Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
+
+<!-- Option 3: Link to a video file on a cloud drive. Replace with your shareable link. -->
+<!-- [Watch the Demo Video](YOUR_SHAREABLE_VIDEO_LINK) -->
 
 ---
 
@@ -18,7 +25,7 @@ https://bloggingplatformmanvith.netlify.app/
 This platform includes a wide range of features, covering core functionalities as well as advanced bonus features.
 
 ### Core Features
-- **User Authentication**: Secyure and simple sign-in/sign-out with Google, powered by Supabase Auth.
+- **User Authentication**: Secure and simple sign-in/sign-out with Google, powered by Supabase Auth.
 - **CRUD for Blogs**:
   - **Create**: A dedicated page to write and publish new blog posts.
   - **Read**: A clean, full-screen view for reading blog posts.
@@ -46,8 +53,7 @@ This platform includes a wide range of features, covering core functionalities a
 
 - **Frontend**: React, Vite, Tailwind CSS
 - **Styling**: SCSS
-- **Database**: Supabase (PostgreSQL, Auth)
-- **Backend**:Express js
+- **Backend & Database**: Supabase (PostgreSQL, Auth)
 - **State Management**: Redux Toolkit
 - **AI**: Google Gemini API
 
@@ -182,4 +188,4 @@ The most prominent AI feature is the title suggestion tool in the blog editor.
   - A `504 (Outdated Optimize Dep)` error from Vite was resolved by getting help from the AI to create a `vite.config.js` file and force-re-bundle dependencies.
   - A `404 model not found` error from the Gemini API was fixed by prompting the AI for the latest recommended model name (`gemini-1.5-flash`).
 - **Database Schema Design**: My initial idea for bookmarks was a simple boolean on the `blogs` table. AI helped me realize a more scalable many-to-many approach using a dedicated `bookmarks` table was better. It also helped debug a `bigint` vs. `uuid` type mismatch in the foreign key constraint.
-- **Auth and Deployment**:  AI help me automate authentication and Netlify deployment as everything is available on the web
+- **Auth and Deployment**: AI helped automate the setup for authentication and provided the configuration and steps for a successful Netlify deployment.
