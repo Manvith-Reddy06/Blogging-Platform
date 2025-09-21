@@ -39,7 +39,7 @@ export default function WriteBlog({ session }) {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 items-center justify-center space-y-6"> 
+    <div className="container mx-auto p-6">
       <h1 className="text-2xl font-bold mb-4">Write a Blog</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -59,7 +59,7 @@ export default function WriteBlog({ session }) {
         />
         <button
           type="submit"
-          className="bg-blue-600 shadow-lg text-black px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+          className="bg-blue-600 shadow-lg text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
         >
           Publish
         </button>
